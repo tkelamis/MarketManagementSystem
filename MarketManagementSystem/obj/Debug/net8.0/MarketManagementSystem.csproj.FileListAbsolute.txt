@@ -26,3 +26,4 @@ C:\Users\kelam\Desktop\Projects\MVC\MarketManagementSystem\MarketManagementSyste
 C:\Users\kelam\Desktop\Projects\MVC\MarketManagementSystem\MarketManagementSystem\obj\Debug\net8.0\MarketManagementSystem.pdb
 C:\Users\kelam\Desktop\Projects\MVC\MarketManagementSystem\MarketManagementSystem\obj\Debug\net8.0\MarketManagementSystem.genruntimeconfig.cache
 C:\Users\kelam\Desktop\Projects\MVC\MarketManagementSystem\MarketManagementSystem\obj\Debug\net8.0\ref\MarketManagementSystem.dll
+C:\Users\kelam\Desktop\Projects\MVC\MarketManagementSystem\MarketManagementSystem\obj\Debug\net8.0\MarketManagementSystem.sourcelink.json

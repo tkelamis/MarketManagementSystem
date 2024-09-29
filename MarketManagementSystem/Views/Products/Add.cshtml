@@ -1,14 +1,12 @@
 ﻿@model ProductViewModel
 
 @section title {
-    <h3>Edit Product</h3>
+    <h3>Add Product</h3>
 }
 
-<form method="post" asp-controller="products" asp-action="edit">
+<form method="post" asp-controller="products" asp-action="add">
 
     <div class="text-danger" asp-validation-summary="All"></div>
-
-    <input type="hidden" asp-for="Product.ProductId" />
 
     <div class="row mb-3">
         <div class="col-2">

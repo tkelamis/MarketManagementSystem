@@ -12,9 +12,36 @@ namespace MarketManagementSystem.Controllers
             return View(products);
         }
 
-        public IActionResult Edit()
+
+        public IActionResult Add()
         {
-            return View();
+            var productViewModel = new ProductViewModel()
+            {
+                Categories = CategoriesRepository.GetCategories()
+            };
+            return View(productViewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Add(ProductViewModel productViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                ProductRepository.AddProduct(productViewModel.Product);
+                return RedirectToAction(nameof(Index));
+            }
+            productViewModel.Categories = CategoriesRepository.GetCategories();
+            return View(productViewModel);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var productViewModel = new ProductViewModel()
+            {
+                Product = ProductRepository.GetProductById(id) ??new Product(),
+                Categories = CategoriesRepository.GetCategories()
+            };
+            return View(productViewModel);
         }
 
         [HttpPost]
@@ -25,13 +52,6 @@ namespace MarketManagementSystem.Controllers
                 ProductRepository.UpdateProduct(product.ProductId, product);
                 return RedirectToAction(nameof(Index));
             }
-            return View(product);
-        }
-
-
-        public IActionResult Add(Product product)
-        {
-
             return View(product);
         }
     }
